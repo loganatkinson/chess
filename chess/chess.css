@@ -1,0 +1,10 @@
+board {
+  width: 400px;
+}
+
+body {
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+}
