@@ -5,6 +5,8 @@ window.onload = function () {
   initGame();
 };
 
+var socket = io();
+
 var initGame = function(){
   var set = {
     draggable: true,
@@ -20,4 +22,10 @@ var moveHandler = function(source, target){
   var move = game.move({from: source, to: target});
 
   if (move == null) return 'snapback';
+  else socket.emit("move", move);
 };
+
+socket.on('move', function(msg){
+  game.move(msg);
+  board.position(game.fen());
+});

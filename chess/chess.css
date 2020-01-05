@@ -2,7 +2,7 @@ board {
   width: 400px;
 }
 
-body {
+/*body {
   overflow-y: auto;
   display: flex;
   align-items: center;
