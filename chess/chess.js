@@ -1,19 +1,15 @@
 var board;
 var game;
 
-window.onload = function () {
-  initGame();
-};
-
 var socket = io();
 
-var initGame = function(){
-  var set = {
-    draggable: true,
-    position: 'start',
-    onDrop: moveHandler,
-  };
-
+window.onload = function () {initGame();};
+  var initGame = function(){
+    var set = {
+      draggable: true,
+      position: 'start',
+      onDrop: moveHandler,
+    };
   board = new ChessBoard('board', set);
   game = new Chess();
 };
