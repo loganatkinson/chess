@@ -10,9 +10,17 @@
   "devDependencies": {
     "mocha": "^6.2.2"
   },
+
+"scripts": {
+    "start": "node chessNode.js"
+  },
+
   "scripts": {
     "test": "mocha"
   },
+
+
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/loganatkinson/chess.git"
