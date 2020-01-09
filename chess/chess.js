@@ -25,3 +25,9 @@ socket.on('move', function(msg){
   game.move(msg);
   board.position(game.fen());
 });
+
+io.on('connection', function(socket){
+  socket.on('chat message', function(msg){
+    console.log('message: ' + msg);
+  });
+});
