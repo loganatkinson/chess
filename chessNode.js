@@ -19,8 +19,19 @@ io.on('connection', function(socket){
     socket.on('move', function(msg){
       socket.broadcast.emit('move', msg);
 
+<<<<<<< Updated upstream
       socket.on('disconnect', function(){
   console.log('Connection lost');
+=======
+      socket.username = "Anon"
+      socket.on('change_username',(data){
+        socket.username = data.username;
+      });
+
+    socket.on('new_message', (data){
+      io.sockets.emit('new_message', {message : data.message, username : socket.username});
+    });
+>>>>>>> Stashed changes
         });
     });
 });

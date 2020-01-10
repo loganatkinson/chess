@@ -11,7 +11,10 @@
     "mocha": "^6.2.2"
   },
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
   "scripts": {
     "test": "mocha"
