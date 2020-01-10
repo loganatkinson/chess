@@ -15,13 +15,13 @@ http.listen(port, function(){
 
 io.on('connection', function(socket){
     console.log('New Connection');
-    socket.username = "Anon"
-    socket.on('change_username', (data){
-      socket.username = data.username
-    })
-    socket.on('new_message', (data){
-      io.sockets.emit('new_message', {message : data.message, username : socket.username})
-    })
+    //socket.username = "Anon"
+    //socket.on('change_username', (data){
+      //socket.username = data.username
+    //})
+    //socket.on('new_message', (data){
+    //  io.sockets.emit('new_message', {message : data.message, username : socket.username})
+    //})
     socket.on('move', function(msg){
       socket.broadcast.emit('move', msg);
     });
