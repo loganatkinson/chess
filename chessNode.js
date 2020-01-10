@@ -20,7 +20,7 @@ io.on('connection', function(socket){
       socket.broadcast.emit('move', msg);
 
       socket.on('disconnect', function(){
-  console.log('user disconnected');
+  console.log('Connection lost');
         });
     });
 });
